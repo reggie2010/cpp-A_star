@@ -48,6 +48,10 @@ int GridPoint::getStatus() {
 	return status;
 }
 
+void GridPoint::setParent(GridPoint gp) {
+	parent = std::make_shared<GridPoint>(gp);
+}
+
 
 
 
