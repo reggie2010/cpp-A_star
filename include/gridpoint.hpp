@@ -4,6 +4,12 @@
 #include <iostream>
 #include "point.hpp"
 
+enum gridPointStatus {
+  OPEN,
+  CLOSED,
+  NONE
+};
+
 class GridPoint : public Point {
   public:
   	GridPoint();
@@ -14,8 +20,11 @@ class GridPoint : public Point {
   	GridPoint operator+(GridPoint p);
   	GridPoint operator-(GridPoint p);
   	friend std::ostream& operator<<(std::ostream &, Point &);
+    void setStatus(gridPointStatus);
+    int getStatus();
 
   private:
+    gridPointStatus status;
   	int fScore;
   	int gScore;
   	int hScore;

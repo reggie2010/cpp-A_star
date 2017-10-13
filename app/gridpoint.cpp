@@ -3,7 +3,9 @@
 
 GridPoint::GridPoint() {};
 
-GridPoint::GridPoint(int x, int y) : Point(x,y) {}
+GridPoint::GridPoint(int x, int y) : Point(x,y) {
+	status = NONE;
+}
 
 void GridPoint::calGScore() {
 	std::cout << "Needs Work" << std::endl;
@@ -37,3 +39,28 @@ std::ostream& operator<<(std::ostream &output, Point &p) {
 	output << "GridPoint(" << p.getX() << "," << p.getY() << ")";
 	return output;
 }
+
+void GridPoint::setStatus(gridPointStatus s) {
+	status = s;
+}
+
+int GridPoint::getStatus() {
+	return status;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
