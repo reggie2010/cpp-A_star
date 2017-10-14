@@ -24,9 +24,11 @@ class GridPoint : public Point {
   public:
     GridPoint();
     GridPoint(int x, int y);
-    void calGScore();
-    void calFScore();
-    void calHScore(GridPoint &);
+    void calG();
+    void calF(GridPoint &);
+    void calH(GridPoint &);
+    int getG();
+    int getF();
     int getH();
     GridPoint operator+(GridPoint p);
     GridPoint operator-(GridPoint p);

@@ -16,12 +16,12 @@ GridPoint::GridPoint(int x, int y) : Point(x,y) {
     status = NONE;
 }
 
-void GridPoint::calG() {
-    std::cout << "Needs Work" << std::endl;
+void GridPoint::calG(GridPoint &gp) {
+    g = g+gp.getG();
 }
 
 void GridPoint::calF() {
-    std::cout << "Needs Work" << std::endl;
+    f = g+h;
 }
 
 void GridPoint::calH(GridPoint &gp) {
@@ -30,6 +30,12 @@ void GridPoint::calH(GridPoint &gp) {
 
     h = 10*(deltaX+deltaY);
 }
+
+int getG() { return g; }
+
+int getF() { return f; }
+
+int getH() { return h; }
 
 GridPoint GridPoint::operator+(GridPoint p) {
     GridPoint newPoint;
