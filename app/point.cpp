@@ -1,3 +1,12 @@
+/**
+ *
+ * @file    point.cpp
+ * @brief   Implementation of Point class functions
+ * @author  Vontrelle Collins
+ * @copyright MIT License
+ *
+ **/
+
 #include <iostream>
 #include <cmath>
 #include "point.hpp"

@@ -1,3 +1,12 @@
+/**
+ *
+ * @file    gridpoint.cpp
+ * @brief   GridPoint class header file
+ * @author  Vontrelle Collins
+ * @copyright MIT License
+ *
+ **/
+
 #ifndef GRIDPOINT_H
 #define GRIDPOINT_H
 
@@ -17,10 +26,12 @@ class GridPoint : public Point {
     GridPoint(int x, int y);
     void calGScore();
     void calFScore();
-    void calHScore();
+    void calHScore(GridPoint &);
+    int getH();
     GridPoint operator+(GridPoint p);
     GridPoint operator-(GridPoint p);
     friend std::ostream& operator<<(std::ostream &, Point &);
+    friend bool operator==(GridPoint &, GridPoint &);
     void setStatus(gridPointStatus);
     int getStatus();
     void setParent(GridPoint);
