@@ -12,7 +12,16 @@
 #include <random>
 #include "grid.hpp"
 
-Grid::Grid(int size) : gridSize(size) {}
+Grid::Grid(int size) : gridSize(size) {
+
+    for(int i=0; i<size; i++) {
+        for(int j=0; j<size; j++) {
+            GridPoint p(i,j);
+            grid.push_back(p);
+        }
+    }
+
+}
 
 void Grid::printGrid() {
     unsigned index {1};
@@ -30,7 +39,7 @@ void Grid::printGrid() {
             std::cout << std::endl;
 
         ++index;
-        
+
     }
 }
 
