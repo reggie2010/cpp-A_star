@@ -24,8 +24,8 @@ class GridPoint : public Point {
   public:
     GridPoint();
     GridPoint(int x, int y);
-    void calG();
-    void calF(GridPoint &);
+    void calG(GridPoint &);
+    void calF();
     void calH(GridPoint &);
     int getG();
     int getF();

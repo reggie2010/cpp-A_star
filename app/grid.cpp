@@ -33,9 +33,9 @@ Grid::Grid(int size) : gridSize(size) {
     destination = std::make_shared<GridPoint>(grid[randomIndex(mt)]);
     destination->setStatus(CLOSED);
 
-    auto index {0};
+    unsigned long index {0};
     while(index<=N) {
-        grid[index].calHScore(*destination);
+        grid[index].calH(*destination);
         ++index;
     }
 

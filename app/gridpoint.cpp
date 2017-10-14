@@ -31,11 +31,11 @@ void GridPoint::calH(GridPoint &gp) {
     h = 10*(deltaX+deltaY);
 }
 
-int getG() { return g; }
+int GridPoint::getG() { return g; }
 
-int getF() { return f; }
+int GridPoint::getF() { return f; }
 
-int getH() { return h; }
+int GridPoint::getH() { return h; }
 
 GridPoint GridPoint::operator+(GridPoint p) {
     GridPoint newPoint;
