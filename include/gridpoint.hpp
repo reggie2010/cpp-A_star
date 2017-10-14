@@ -39,9 +39,9 @@ class GridPoint : public Point {
   private:
     std::shared_ptr<GridPoint> parent;
     gridPointStatus status;
-    int fScore;
-    int gScore;
-    int hScore;
+    int f;
+    int g;
+    int h;
 };
 
 #endif
