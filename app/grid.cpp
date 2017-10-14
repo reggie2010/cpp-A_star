@@ -21,6 +21,18 @@ Grid::Grid(int size) : gridSize(size) {
         }
     }
 
+    auto N {grid.size()-1};
+
+    std::random_device rand;
+    std::mt19937 mt(rand());
+    std::uniform_int_distribution<int> randomIndex(0, N);
+
+    start = std::make_shared<GridPoint>(grid[randomIndex(mt)]);
+    start->setStatus(OPEN);
+
+    destination = std::make_shared<GridPoint>(grid[randomIndex(mt)]);
+    destination->setStatus(CLOSED);
+
 }
 
 void Grid::printGrid() {
