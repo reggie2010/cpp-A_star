@@ -25,7 +25,10 @@ void GridPoint::calFScore() {
 }
 
 void GridPoint::calHScore(GridPoint &gp) {
-    std::cout << "Needs Work" << std::endl;
+	int deltaX {abs(x-gp.getX())};
+	int deltaY {abs(y-gp.getY())};
+
+	hScore = 10*(deltaX+deltaY);
 }
 
 GridPoint GridPoint::operator+(GridPoint p) {
@@ -47,6 +50,10 @@ GridPoint GridPoint::operator-(GridPoint p) {
 std::ostream& operator<<(std::ostream &output, Point &p) {
     output << "GridPoint(" << p.getX() << "," << p.getY() << ")";
     return output;
+}
+
+bool operator==(GridPoint &gp1, GridPoint &gp2) {
+	return (gp1.getX()==gp2.getX() && gp1.getY()==gp2.getY());
 }
 
 void GridPoint::setStatus(gridPointStatus s) {
