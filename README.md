@@ -25,6 +25,4 @@
 ```
 
 ## SIP Process
-```
 View Spreedsheet: [Click Here](https://docs.google.com/spreadsheets/d/1-gAjTy0ooMH7pE0F6lr0A7RAmAapvc0R1SgJPUTk70g/edit?usp=sharing)
-```
