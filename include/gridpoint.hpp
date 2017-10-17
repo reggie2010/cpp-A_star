@@ -15,8 +15,10 @@
 #include "point.hpp"
 
 enum gridPointStatus {
-  OPEN,
-  CLOSED,
+  START,
+  DESTINATION,
+  BLOCKED,
+  PATH,
   NONE
 };
 
@@ -32,17 +34,16 @@ class GridPoint : public Point {
     int getH();
     GridPoint operator+(GridPoint p);
     GridPoint operator-(GridPoint p);
-    friend std::ostream& operator<<(std::ostream &, Point &);
+    friend std::ostream& operator<<(std::ostream &, GridPoint &);
     friend bool operator==(GridPoint &, GridPoint &);
     void setStatus(gridPointStatus);
     int getStatus();
-    void setParent(GridPoint);
 
   private:
     std::shared_ptr<GridPoint> parent;
     gridPointStatus status;
     int f;
-    int g;
+    int g {10};
     int h;
 };
 
