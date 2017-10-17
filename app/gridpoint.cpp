@@ -61,13 +61,6 @@ GridPoint GridPoint::operator-(GridPoint p) {
     return newPoint;
 }
 
-std::ostream& operator<<(std::ostream &output, GridPoint &p) {
-    // Function for printing a GridPoint with normal c++ cout
-    output << "GridPoint(" << p.getX() << "," << p.getY() << ",f:" << p.getF() \
-    << ", g:" << p.getG() << ", h:" << p.getH() << ")";
-    return output;
-}
-
 bool operator==(GridPoint &gp1, GridPoint &gp2) {
     // Functionto use == to compare to GridPoints 
     return (gp1.getX()==gp2.getX() && gp1.getY()==gp2.getY());

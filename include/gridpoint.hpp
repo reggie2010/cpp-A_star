@@ -34,7 +34,6 @@ class GridPoint : public Point {
     int getH();
     GridPoint operator+(GridPoint p);
     GridPoint operator-(GridPoint p);
-    friend std::ostream& operator<<(std::ostream &, GridPoint &);
     friend bool operator==(GridPoint &, GridPoint &);
     void setStatus(gridPointStatus);
     int getStatus();
