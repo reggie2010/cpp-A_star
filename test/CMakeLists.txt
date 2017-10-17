@@ -4,6 +4,7 @@ add_executable(
     cpp-test
     main.cpp
     test.cpp
+    ../app/point.cpp
     ../app/gridpoint.cpp
 )
 
