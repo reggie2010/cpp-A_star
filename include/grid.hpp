@@ -14,17 +14,23 @@
 #include <memory>
 #include "vector"
 
+bool myFunc(std::shared_ptr<GridPoint> a, std::shared_ptr<GridPoint> b);
+
 class Grid {
   public:
-    Grid(int size);
+    Grid();
     void printGrid();
-    std::vector<GridPoint> findPath();
+    int findIndex(GridPoint &);
+    void findPath();
 
   private:
     int gridSize;
     std::vector<GridPoint> grid;
-    std::shared_ptr<GridPoint> start;
-    std::shared_ptr<GridPoint> destination;
+    std::vector<std::shared_ptr<GridPoint>> openList;
+    std::vector<std::shared_ptr<GridPoint>> closedList;
+    int iStart;
+    int iDestination;
+
 
   	
 };
