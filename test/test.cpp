@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 
 #include "gridpoint.hpp"
+#include "grid.hpp"
 
 TEST(Point, gribpoint_check) {
     GridPoint p1(2,2);
@@ -24,4 +25,11 @@ TEST(Point, gribpoint_check) {
     p1.setStatus(PATH);
 
     ASSERT_EQ(p1.getStatus(), 3);
+}
+
+TEST(Grid, grid_check) {
+    Grid myGrid;
+    GridPoint p(0,0);
+
+    ASSERT_TRUE(myGrid.findIndex(p) == 0);
 }

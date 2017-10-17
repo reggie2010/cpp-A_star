@@ -6,6 +6,7 @@ add_executable(
     test.cpp
     ../app/point.cpp
     ../app/gridpoint.cpp
+    ../app/grid.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
