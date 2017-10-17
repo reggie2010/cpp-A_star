@@ -9,19 +9,24 @@
 
 ## Install & Build via command-line
 ```
-
+git clone --recursive https://github.com/reggie2010/cpp-A_star.git
+cd <path to repository>
+mkdir build
+cd build
+cmake ..
+make -j$(nproc)
 ```
 
 
 ## Running Demo
 ```
-
+./app/main-app
 ```
 
 
 ## Running Test
 ```
-
+./test/cpp-test
 ```
 
 ## SIP Process
