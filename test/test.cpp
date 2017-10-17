@@ -20,4 +20,8 @@ TEST(Point, gribpoint_check) {
     ASSERT_GE(p1.getG(), 10);
     ASSERT_GT(p1.getH(), 0);
     ASSERT_GT(p1.getF(), 0);
+
+    p1.setStatus(PATH);
+
+    ASSERT_EQ(p1.getStatus(), 3);
 }
