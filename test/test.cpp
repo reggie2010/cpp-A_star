@@ -29,7 +29,11 @@ TEST(Point, gribpoint_check) {
 
 TEST(Grid, grid_check) {
     Grid myGrid;
+    myGrid.printGrid();
+    myGrid.findPath();
+    myGrid.printGrid();
     GridPoint p(0,0);
+
 
     ASSERT_TRUE(myGrid.findIndex(p) == 0);
 }
