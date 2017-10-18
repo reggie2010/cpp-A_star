@@ -110,19 +110,30 @@ void Grid::findPath() {
 
         std::shared_ptr<GridPoint> e = std::make_shared<GridPoint>(grid[findIndex(children[0])]);
         e->calF();
-        openList.push_back(e);
+
+        if(!(findIndex(*e) < 0))
+            openList.push_back(e);
 
         std::shared_ptr<GridPoint> w = std::make_shared<GridPoint>(grid[findIndex(children[1])]);
         w->calF();
-        openList.push_back(w);
+
+        if(!(findIndex(*w) < 0))
+            openList.push_back(w);
+
     
         std::shared_ptr<GridPoint> n = std::make_shared<GridPoint>(grid[findIndex(children[2])]);
         n->calF();
-        openList.push_back(n);
+        
+        if(!(findIndex(*n) < 0))
+            openList.push_back(n);
     
         std::shared_ptr<GridPoint> s = std::make_shared<GridPoint>(grid[findIndex(children[3])]);
         s->calF();
-        openList.push_back(s);
+        
+        if(!(findIndex(*
+
+            s) < 0))
+            openList.push_back(s);
 
         std::sort (openList.begin(), openList.end(), myFunc);
 
