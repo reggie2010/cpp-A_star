@@ -7,6 +7,7 @@ TEST(Point, gribpoint_check) {
     GridPoint p1(2,2);
     GridPoint p2(3,3);
     GridPoint p3(5,5);
+    GridPoint p4(2,1);
 
     GridPoint a = p1+p2;
     GridPoint b = p3-p1;
@@ -25,6 +26,8 @@ TEST(Point, gribpoint_check) {
     p1.setStatus(PATH);
 
     ASSERT_EQ(p1.getStatus(), 3);
+
+    ASSERT_EQ(p4.distance(p3), 5);
 }
 
 TEST(Grid, grid_check) {

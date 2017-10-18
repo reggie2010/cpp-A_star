@@ -13,6 +13,8 @@
 int main() {
 
     Grid grid;
+    grid.printGrid();
+    std::cout << std::endl;
     grid.findPath();
     grid.printGrid();
 
