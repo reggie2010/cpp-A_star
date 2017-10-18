@@ -14,7 +14,7 @@
 
 Point::Point(int x, int y) : x(x), y(y) {}
 
-Point::Point() {};
+Point::Point() {}
 
 int Point::getX() { return x; }
 
