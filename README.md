@@ -6,7 +6,9 @@
 
 ## Overview & Purpose
 ```
-A* is used to find a path to a destination from a given start point. My Implementation moves the robot in straight line, has no diagonal movements. Below is demo of the application.
+A* is used to find a path to a destination from a given start point. 
+My Implementation moves the robot in straight line, has no diagonal movements. 
+Below is demo of the application.
 
 Map with O(start location) and X(destination)
 - - - - - - - - - - - - - - - - - - - - 
