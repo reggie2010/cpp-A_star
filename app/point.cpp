@@ -29,5 +29,7 @@ void Point::setY(int newY) {
 }
 
 int Point::distance(Point p) {
+
+    //Calculates the. distance between two points
 	return sqrt(pow((x - p.getX()), 2) + pow((y - p.getY()), 2));
 }

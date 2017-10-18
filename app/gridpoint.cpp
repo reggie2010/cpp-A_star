@@ -24,7 +24,7 @@ void GridPoint::calG(GridPoint &gp) {
 }
 
 void GridPoint::calF() {
-    // Calculates f
+    // Calculates f heurestic h+g
     f = g+h;
 }
 
